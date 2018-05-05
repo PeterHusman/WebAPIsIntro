@@ -39,44 +39,50 @@
             // messageDisplay
             // 
             this.messageDisplay.FormattingEnabled = true;
-            this.messageDisplay.Location = new System.Drawing.Point(208, 27);
+            this.messageDisplay.HorizontalScrollbar = true;
+            this.messageDisplay.Location = new System.Drawing.Point(32, 27);
             this.messageDisplay.Name = "messageDisplay";
-            this.messageDisplay.Size = new System.Drawing.Size(580, 407);
+            this.messageDisplay.Size = new System.Drawing.Size(756, 199);
             this.messageDisplay.TabIndex = 0;
             // 
             // msg
             // 
-            this.msg.Location = new System.Drawing.Point(41, 71);
+            this.msg.Location = new System.Drawing.Point(32, 267);
             this.msg.Name = "msg";
-            this.msg.Size = new System.Drawing.Size(100, 20);
+            this.msg.Size = new System.Drawing.Size(756, 20);
             this.msg.TabIndex = 1;
+            this.msg.KeyDown += new System.Windows.Forms.KeyEventHandler(this.msg_KeyDown);
+            this.msg.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.msg_KeyPress);
+            this.msg.KeyUp += new System.Windows.Forms.KeyEventHandler(this.msg_KeyUp);
             // 
             // name
             // 
-            this.name.Location = new System.Drawing.Point(41, 45);
+            this.name.Location = new System.Drawing.Point(32, 241);
             this.name.Name = "name";
-            this.name.Size = new System.Drawing.Size(100, 20);
+            this.name.Size = new System.Drawing.Size(377, 20);
             this.name.TabIndex = 2;
             // 
             // send
             // 
-            this.send.Location = new System.Drawing.Point(41, 98);
+            this.send.Location = new System.Drawing.Point(32, 293);
             this.send.Name = "send";
-            this.send.Size = new System.Drawing.Size(75, 23);
+            this.send.Size = new System.Drawing.Size(756, 23);
             this.send.TabIndex = 3;
+            this.send.Text = "Send";
             this.send.UseVisualStyleBackColor = true;
             this.send.Click += new System.EventHandler(this.send_Click);
             // 
             // timer
             // 
-            this.timer.Interval = 500;
+            this.timer.Enabled = true;
+            this.timer.Interval = 200;
             this.timer.Tick += new System.EventHandler(this.timer_Tick);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(801, 327);
             this.Controls.Add(this.send);
             this.Controls.Add(this.name);
             this.Controls.Add(this.msg);

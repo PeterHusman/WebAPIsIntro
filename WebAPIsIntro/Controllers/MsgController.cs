@@ -15,13 +15,13 @@ namespace WebAPIsIntro.Controllers
     {
         [HttpGet]
         [Route("history")]
-        public string[] GetHistory()
+        public Msg[] GetHistory()
         {
             if(ChatHistory.MsgHistory == null)
             {
                 ChatHistory.MsgHistory = new List<Msg>(); 
             }
-            return ChatHistory.ToStringArray();
+            return ChatHistory.MsgHistory.ToArray();
         }
 
         [HttpPost]
@@ -34,5 +34,7 @@ namespace WebAPIsIntro.Controllers
             }
             ChatHistory.MsgHistory.Add(msg);
         }
+
+        
     }
 }
